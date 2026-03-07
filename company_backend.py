@@ -17,12 +17,14 @@ load_dotenv()
 # Get API key from Streamlit secrets (cloud) or .env (local)
 try:
     import streamlit as st
-    api_key = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY"))
-except:
+    api_key = st.secrets.get("GROQ_API_KEY", None) or os.getenv("GROQ_API_KEY")
+except Exception:
     api_key = os.getenv("GROQ_API_KEY")
 
 # Initialize Groq client
-groq_client = Groq(api_key=api_key)
+groq_client = None
+if api_key:
+    groq_client = Groq(api_key=api_key)
 
 def company_pdf_from_file(file_path):
     """Load PDF from uploaded file and return index + stats"""
