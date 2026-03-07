@@ -8,9 +8,9 @@ An AI-powered Question & Answer application that lets you upload company policy 
 
 ## Demo
 
-<video src="https://github.com/RajkumarBR9789/company-Policy-RAG/raw/main/rag.mp4" controls="controls" style="max-width: 100%;">
-  Your browser does not support the video tag.
-</video>
+[![Watch Demo](https://img.shields.io/badge/Watch-Demo_Video-black?style=for-the-badge&logo=github)](https://github.com/RajkumarBR9789/company-Policy-RAG/raw/main/rag.mp4)
+
+> Click the badge above to download and watch the demo video.
 
 ---
 
