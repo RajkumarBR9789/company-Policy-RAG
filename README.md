@@ -10,6 +10,8 @@ An AI-powered Question & Answer application that lets you upload company policy 
 
 https://github.com/user-attachments/assets/6b046d2e-26a9-438b-8f9c-6e01eb9f3cfa
 
+> **On mobile?** [Click here to watch the demo video](https://github.com/user-attachments/assets/6b046d2e-26a9-438b-8f9c-6e01eb9f3cfa)
+
 ---
 
 ## Architecture
