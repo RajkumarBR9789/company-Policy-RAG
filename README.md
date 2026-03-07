@@ -8,9 +8,7 @@ An AI-powered Question & Answer application that lets you upload company policy 
 
 ## Demo
 
-https://github.com/user-attachments/assets/demo.mp4
-
-> Place your demo video in the repo or replace the link above with your video URL.
+https://github.com/RajkumarBR9789/company-Policy-RAG/raw/main/rag.mp4
 
 ---
 
