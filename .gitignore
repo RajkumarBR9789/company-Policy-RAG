@@ -1,4 +1,6 @@
+/__pycache__
 .env
-temp_pdf.pdf
-__pycache__/
 .venv/
+*.pyc
+.vscode/
+temp_pdf.pdf

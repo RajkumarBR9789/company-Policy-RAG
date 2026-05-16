@@ -14,16 +14,28 @@ https://github.com/user-attachments/assets/6b046d2e-26a9-438b-8f9c-6e01eb9f3cfa
 
 ---
 
+## Screenshots
+
+### Main Interface
+![Main Interface](app_ui_1.png)
+> Upload a PDF and ask questions about company policies.
+
+### Answer with Sources
+![Answer with Sources](app_ui_2.png)
+> AI-generated answers with expandable retrieved source chunks.
+
+---
+
 ## Architecture
 
 ```
 PDF Upload --> PDF Loader --> Text Splitter --> Embeddings --> FAISS Vector DB
-                                                                    |
+                                                                     |     
 User Question --> Embedding --> Similarity Search (FAISS) --> Top-K Chunks
-                                                                    |
+                                                                     |     
                                                          Groq LLaMA 3.3 70B
-                                                                    |
-                                                              Answer + Sources
+                                                                     |     
+                                                               Answer + Sources
 ```
 
 ---
@@ -44,12 +56,12 @@ User Question --> Embedding --> Similarity Search (FAISS) --> Top-K Chunks
 
 ## Features
 
-- **PDF Upload** -- Upload any company policy document in PDF format
+- **PDF Upload** -- Upload any company policy document in PDF format      
 - **RAG Pipeline** -- Retrieval-Augmented Generation for accurate, context-based answers
 - **Vector Database Display** -- Real-time stats showing pages, chunks, vectors, dimensions, and embedding model
 - **Source Attribution** -- View the exact document chunks used to generate each answer
 - **Dark Theme UI** -- Clean black and white minimal interface
-- **Groq-Powered** -- Ultra-fast inference using Groq's LPU hardware
+- **Groq-Powered** -- Ultra-fast inference using Groq's LPU hardware      
 
 ---
 
@@ -60,7 +72,7 @@ company-Policy-RAG/
 ├── company_backend.py      # RAG pipeline: PDF processing, embeddings, FAISS, Groq LLM
 ├── company_frontend.py     # Streamlit UI: upload, query, display results
 ├── requirements.txt        # Python dependencies
-├── .env                    # Local environment variables (not in repo)
+├── .env                    # Local environment variables (not in repo)   
 ├── .gitignore              # Git ignore rules
 └── README.md               # Project documentation
 ```
@@ -89,7 +101,7 @@ company-Policy-RAG/
 
 ```bash
 # Clone the repository
-git clone https://github.com/RajkumarBR9789/company-Policy-RAG.git
+git clone https://github.com/RajkumarBR9789/company-Policy-RAG.git        
 cd company-Policy-RAG
 
 # Create virtual environment
@@ -124,27 +136,14 @@ The app will open at `http://localhost:8501`
 
 ## Configuration
 
-| Parameter       | Value                  | Description                          |
-|-----------------|------------------------|--------------------------------------|
-| Chunk Size      | 1000 characters        | Size of each text chunk              |
-| Chunk Overlap   | 200 characters         | Overlap between consecutive chunks   |
-| Top-K Results   | 5                      | Number of similar chunks retrieved   |
-| Max Tokens      | 1024                   | Maximum response length from LLM     |
-| Embedding Model | all-MiniLM-L6-v2       | 384-dim sentence embeddings          |
-| LLM Model       | llama-3.3-70b-versatile| Groq-hosted LLaMA model              |
-
----
-
-## Screenshots
-
-### Main Interface
-> Upload a PDF and ask questions about company policies.
-
-### Vector Database Stats
-> Real-time display of FAISS index statistics in the sidebar.
-
-### Answer with Sources
-> AI-generated answers with expandable retrieved source chunks.
+| Parameter       | Value                  | Description                                          |
+|-----------------|------------------------|------------------------------------------------------|
+| Chunk Size      | 1000 characters        | Size of each text chunk                              |
+| Chunk Overlap   | 200 characters         | Overlap between consecutive chunks                   |
+| Top-K Results   | 5                      | Number of similar chunks retrieved                   |
+| Max Tokens      | 1024                   | Maximum response length from LLM                     |
+| Embedding Model | all-MiniLM-L6-v2       | 384-dim sentence embeddings                          |
+| LLM Model       | llama-3.3-70b-versatile| Groq-hosted LLaMA model                              |
 
 ---
 
